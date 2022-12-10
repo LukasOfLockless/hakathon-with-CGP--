@@ -9,11 +9,12 @@ using System.Linq;
 namespace CamBiometrics
 {
 
-  public class interpolatetomakemore
+  public class testCurves1
   {
-    public static void DataClean()
+    public static void CrackheadForData2()
     {
-
+      Color cca = Color.FromName("DarkGreen");
+      Color ccb = Color.FromName("WhiteSmoke");
 
       string[] alllines = File.ReadAllLines("realdata\\realdata2.txt");
       //int width = alllines.Length;
@@ -22,6 +23,7 @@ namespace CamBiometrics
       //int height=100;//default value for image height
       int[] bpmvalues = new int[alllines.Length];
       int[] timeValues = new int[alllines.Length];
+
 
 
 
@@ -47,6 +49,7 @@ namespace CamBiometrics
           Console.WriteLine("failed parsing at index " + alllines[i]);
           continue;
         }
+
         if(bpm == 0 )continue;
 
         bpmvalues[indexwhereput] = bpm;
@@ -55,6 +58,8 @@ namespace CamBiometrics
 
         //Console.WriteLine("parsegood");
       }
+
+
 
       Console.WriteLine("gavau toki arr" + bpmvalues.Length);
       /*
@@ -66,21 +71,49 @@ namespace CamBiometrics
 
         //trunkate
         Array.Resize(ref bpmvalues, indexwhereput);
+        Array.Resize(ref timeValues, indexwhereput);
 
 
-        int[] bpmvalues = DataRoll(bpmvalues);
-        int[] bpmvalues = DataRoll(bpmvalues);
-        int[] bpmvalues = DataRoll(bpmvalues);
-        int[] bpmvalues = DataRoll(bpmvalues);
+
+
+        int bpmminvalue = 100;
+        int bpmmaxvalue = 10;
+
+        int width = bpmvalues.Length;
+        for(int i = 0 ; i < bpmvalues.Length; i++)
+        {
+          if (bpmvalues[i]>bpmmaxvalue)
+          {
+            bpmmaxvalue = bpmvalues[i];
+          }
+          if (bpmvalues[i]<bpmminvalue)
+          {
+            bpmminvalue = bpmvalues[i];
+          }
+        }
+        int height = bpmmaxvalue - bpmminvalue;
+
+
+        int susitarimas = 1920;// nes toks gerai ziurisi
+        double step = 1920.0 / width;
+        var bmp  = new Bitmap(susitarimas, height);
+        {
+          //background
+          for (var y = 0; y < bmp.Height; y++)
+          for (var x = 0; x < bmp.Width; x++)
+          {
+              bmp.SetPixel(x, y , cca);
+          }
+        }
+        //put points
+        for(int i = 1 ; i<bpmvalues.Length ; i++)
+        {
+
+        }
+
+
 
 
       }
-    public void DataRoll(int[] arr)
-    {
-      //rolling avg of 4 nearest points
-      int[] arrarr  = new int[arr.Length];
-
-    }
-
   }
 }

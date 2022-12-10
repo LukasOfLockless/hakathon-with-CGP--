@@ -16,9 +16,9 @@ namespace CamBiometrics
       Color cca = Color.FromName("DarkGreen");
       Color ccb = Color.FromName("WhiteSmoke");
 
-      string[] alllines = File.ReadAllLines("realdata\\realdata2.txt");
+      string[] alllines = File.ReadAllLines("realdata\\realdata01.txt");
       //int width = alllines.Length;
-      Console.WriteLine("sample count" +alllines.Length);
+      Console.WriteLine("sample count" + alllines.Length);
       //analysis min max for image height without any squash
       //int height=100;//default value for image height
       int[] bpmvalues = new int[alllines.Length];
