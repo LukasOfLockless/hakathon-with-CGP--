@@ -14,8 +14,9 @@ namespace CamBiometrics // Note: actual namespace depends on the project name.
           //testsyntheticheartbeat.writedatatonewCsv();
 
           //testdraw1.Draw();//blue item bmp
-           testCurves2.CrackheadForData2();
+           //testCurves2.CrackheadForData2();
           //draw_a.Save("tests\\datavis_width.bmp");
+          interpolatetomakemore.DataClean();
           Console.WriteLine("end");
           Console.ReadKey();
         }

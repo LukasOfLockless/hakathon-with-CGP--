@@ -76,7 +76,11 @@ namespace CamBiometrics
         Console.WriteLine("rolled up length"+bpmvalues.Length);
         int[] bpmvalues = DataRoll(bpmvalues);
         Console.WriteLine("rolled up length"+bpmvalues.Length);
-
+        Console.WriteLine("finalfinal");
+        for (int i = 0 ; i< bpmvalues.Length ; i++)
+        {
+            Cosole.WriteLine(bpmvalues[i]);
+        }
 
       }
       //doubleup data using some rolling avg

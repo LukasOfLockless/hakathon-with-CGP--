@@ -127,7 +127,7 @@ namespace CamBiometrics
         }
 
 
-        return bmp;
+        //return bmp;
 
 
       }
