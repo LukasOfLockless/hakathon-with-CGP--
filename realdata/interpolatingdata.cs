@@ -11,7 +11,7 @@ namespace CamBiometrics
 
   public class interpolatetomakemore
   {
-    public static void CrackheadForData2()
+    public static void DataClean()
     {
 
 
@@ -66,15 +66,21 @@ namespace CamBiometrics
 
         //trunkate
         Array.Resize(ref bpmvalues, indexwhereput);
-        int[] bpmvalues = doubleThisUp(bpmvalues);
 
 
+        int[] bpmvalues = DataRoll(bpmvalues);
+        int[] bpmvalues = DataRoll(bpmvalues);
+        int[] bpmvalues = DataRoll(bpmvalues);
+        int[] bpmvalues = DataRoll(bpmvalues);
 
-}
-  public void doubleThisUp(int[] arr)
-  {
-    int[] arrarr  = new int[arr.Length];
-    
+
+      }
+    public void DataRoll(int[] arr)
+    {
+      //rolling avg of 4 nearest points
+      int[] arrarr  = new int[arr.Length];
+
+    }
+
   }
-
-}}
+}
