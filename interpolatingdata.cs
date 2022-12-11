@@ -67,16 +67,25 @@ namespace CamBiometrics
         //trunkate
         Array.Resize(ref bpmvalues, indexwhereput);
 
+        int[] new1bpmvalues = new int[bpmvalues.Length*2];
+        Array.Copy(DataRoll(bpmvalues),new1bpmvalues,bpmvalues.Length*2);
+        Array.Copy(DataRoll(new1bpmvalues),bpmvalues,new1bpmvalues.Length);
+        Console.WriteLine("rolled up length"+bpmvalues.Length);
+        int[] new1bpmvalues = new int[bpmvalues.Length*2];
+        Array.Copy(DataRoll(bpmvalues),new1bpmvalues,bpmvalues.Length*2);
+        Array.Copy(DataRoll(new1bpmvalues),bpmvalues,new1bpmvalues.Length);
+        Console.WriteLine("rolled up length"+bpmvalues.Length);
+        int[] new1bpmvalues = new int[bpmvalues.Length*2];
+        Array.Copy(DataRoll(bpmvalues),new1bpmvalues,bpmvalues.Length*2);
+        Array.Copy(DataRoll(new1bpmvalues),bpmvalues,new1bpmvalues.Length);
+        Console.WriteLine("rolled up length"+bpmvalues.Length);
+        int[] new1bpmvalues = new int[bpmvalues.Length*2];
+        Array.Copy(DataRoll(bpmvalues),new1bpmvalues,bpmvalues.Length*2);
+        Array.Copy(DataRoll(new1bpmvalues),bpmvalues,new1bpmvalues.Length);
+        Console.WriteLine("rolled up length"+bpmvalues.Length);
 
-        int[] bpmvalues = DataRoll(bpmvalues);
-        Console.WriteLine("rolled up length"+bpmvalues.Length);
-        int[] bpmvalues = DataRoll(bpmvalues);
-        Console.WriteLine("rolled up length"+bpmvalues.Length);
-        int[] bpmvalues = DataRoll(bpmvalues);
-        Console.WriteLine("rolled up length"+bpmvalues.Length);
-        int[] bpmvalues = DataRoll(bpmvalues);
-        Console.WriteLine("rolled up length"+bpmvalues.Length);
         Console.WriteLine("finalfinal");
+
         for (int i = 0 ; i< bpmvalues.Length ; i++)
         {
             Cosole.WriteLine(bpmvalues[i]);
